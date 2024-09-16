@@ -150,7 +150,7 @@ function openDocument(url, name) {
 // -------------------------------------------------------------------------- //
 
 function validarNombreApellido(event) {
-  const regex = /^[A-Za-záéíóúñÑ]+$/;
+  const regex = /^[A-Za-záéíóúñÑ ]+$/;
   if (!regex.test(event.target.value)) {
     event.target.setCustomValidity("Solo se permiten letras en este campo");
     alert("Por favor, ingrese solo letras en el campo de Nombre.");
