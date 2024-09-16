@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #000050;
+  --secondary-color: #34a8ff;
+  --accent-color: #ffd700;
+  --neutral-dark: #333333;
+  --neutral-light: #f0f0f0;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#home,
+#contacto {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand img,
+.footer_logo img {
+  max-width: 35px;
+}
+
+.navbar-brand span,
+.lead {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.navbar-toggler {
+  border-color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+#hero {
+  height: 91vh;
+}
+
+#hero img {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.3);
+}
+
+#cv {
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+#cv:hover {
+  font-weight: 600;
+  background-color: #b99f0a !important;
+}
+
+#video {
+  border: 2px solid #ffd700 !important;
+  background-color: transparent !important;
+}
+
+#video:hover {
+  border: 2px solid #b99f0a !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ========================   Habilidades   ============================= */
+
+#habilidades {
+  height: 100vh;
+}
+
+.btn-habilidades {
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+.btn-habilidades:hover {
+  color: var(--white);
+  font-weight: 600;
+  background-color: #b99f0a !important;
+}
+
+/* ========================   Educacion   ============================= */
+
+#educacion {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.card {
+  background-color: transparent;
+}
+
+.about__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.card-body {
+  width: 100% !important;
+}
+
+.card-title {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color); /* Color del subtítulo */
+  padding-top: 4rem;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+
+.about_card {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_card h3::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--accent-color);
+  z-index: -1;
+}
+
+.btn-educacion {
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+.btn-educacion:hover {
+  color: var(--white);
+  font-weight: 600;
+  background-color: #b99f0a !important;
+}
+
+.modal-title {
+  color: #000050; /* Color personalizado */
+}
+
+.modal-body img {
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+/* ========================   Proyectos / Productos   ============================= */
+
+#proyectos {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-project {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  margin-bottom: 0.5rem;
+}
+
+.card-title-projects {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.card-text {
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.btn-proyectos {
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+.btn-proyectos:hover {
+  color: var(--white);
+  font-weight: 600;
+  background-color: #b99f0a !important;
+}
+
+/* Estilos para las imágenes */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Asegurarse de que todas las imágenes tengan la misma altura */
+.card-project img {
+  height: 200px; /* Ajusta este valor según tus necesidades */
+}
+
+/* Media queries para dispositivos tablet y móvil */
+@media (max-width: 768px) {
+  .card-project img {
+    height: 150px; /* Ajusta este valor según tus necesidades */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-project img {
+    height: 100px; /* Ajusta este valor según tus necesidades */
+  }
+}
+
+/* Estilos adicionales para el modal de proyectos */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-dialog.modal-xl {
+  max-width: 95%;
+}
+
+@media (max-width: 767px) {
+  .modal-dialog.modal-xl {
+    max-width: 100%;
+    margin: 0;
+    height: 100%;
+  }
+
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .modal-body .row {
+    flex-direction: column;
+  }
+
+  .modal-body .col-md-3,
+  .modal-body .col-md-9 {
+    width: 100%;
+  }
+
+  #documentList {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ========================   Footer   ============================= */
+.text-icon {
+  color: #000050;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text-icon:hover {
+  color: #0707f3;
+}
+
+/* ========================   Responsive   ============================= */
+
+@media (max-width: 991.98px) {
+  #hero img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand span,
+  .lead {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  #hero img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .navbar-brand span,
+  .lead {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #hero img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  #hero-btns {
+    flex-direction: column;
+  }
+
+  #cv {
+    margin: 0 !important;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand span,
+  .lead {
+    font-size: clamp(1rem, 2vw, 1rem);
+  }
+}
