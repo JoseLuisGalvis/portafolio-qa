@@ -10,7 +10,7 @@ document
     const telefono = document.getElementById("inputPhone").value;
     const mensaje = document.getElementById("inputMessage").value;
 
-    const apiKey = "WwgnGAZhLvaIVKfy"; // Reemplaza con tu API Key de Brevo
+    const apiKey = "**********"; // Reemplaza con tu API Key de Brevo
     const url = "https://api.brevo.com/v3/smtp/email";
 
     const data = {
