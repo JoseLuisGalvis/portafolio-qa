@@ -166,13 +166,6 @@ document.getElementById("inputPhone").addEventListener("input", function (e) {
   }
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  // Aquí puedes agregar la lógica para enviar el formulario
-  alert("Formulario enviado con éxito!");
-  document.getElementById("contactForm").reset();
-});
-
 // -------------------------------------------------------------------------- //
 
 document.addEventListener("DOMContentLoaded", () => {

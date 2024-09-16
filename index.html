@@ -736,11 +736,11 @@
 
           emailjs.sendForm("service_mn9l8gc", "template_5kp1ksm", this).then(
             function () {
-              console.log("Éxito!");
+              console.log("Mensaje Enviado con Éxito!");
               alert("Mensaje Enviado con Éxito");
             },
             function (error) {
-              console.log("Falló...", error);
+              console.log("Error al Enviar el Mensaje", error);
               alert("Error al Enviar el Mensaje");
             }
           );
