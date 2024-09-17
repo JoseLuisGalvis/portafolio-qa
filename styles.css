@@ -15,10 +15,8 @@
   box-sizing: border-box;
 }
 
-/* General Styles */
 #home,
-#contacto,
-#educacion {
+#contacto {
   background-color: var(--primary-color);
 }
 
@@ -42,7 +40,6 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* Hero Section */
 #hero {
   height: 91vh;
 }
@@ -54,7 +51,6 @@
   box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.3);
 }
 
-/* CV Button */
 #cv {
   color: var(--white);
   background-color: var(--accent-color);
@@ -65,7 +61,6 @@
   background-color: #b99f0a !important;
 }
 
-/* Video Button */
 #video {
   border: 2px solid #ffd700 !important;
   background-color: transparent !important;
@@ -76,7 +71,8 @@
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Habilidades Section */
+/* ========================   Habilidades   ============================= */
+
 #habilidades {
   height: 100vh;
 }
@@ -92,12 +88,14 @@
   background-color: #b99f0a !important;
 }
 
-/* Educacion Section */
+/* ========================   Educacion   ============================= */
+
 #educacion {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary-color);
 }
 
 .card {
@@ -119,7 +117,7 @@
   position: relative;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Color del subtítulo */
   padding-top: 4rem;
   margin-bottom: 1rem;
   z-index: 3;
@@ -155,7 +153,7 @@
 }
 
 .modal-title {
-  color: #000050;
+  color: #000050; /* Color personalizado */
 }
 
 .modal-body img {
@@ -165,7 +163,8 @@
   border: 1px solid #ddd;
 }
 
-/* Proyectos / Productos Section */
+/* ========================   Proyectos / Productos   ============================= */
+
 #proyectos {
   min-height: 100vh;
   display: flex;
@@ -204,30 +203,32 @@
   background-color: #b99f0a !important;
 }
 
-/* Responsive Images */
+/* Estilos para las imágenes */
 .responsive-img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
+/* Asegurarse de que todas las imágenes tengan la misma altura */
 .card-project img {
-  height: 200px;
+  height: 200px; /* Ajusta este valor según tus necesidades */
 }
 
+/* Media queries para dispositivos tablet y móvil */
 @media (max-width: 768px) {
   .card-project img {
-    height: 150px;
+    height: 150px; /* Ajusta este valor según tus necesidades */
   }
 }
 
 @media (max-width: 576px) {
   .card-project img {
-    height: 100px;
+    height: 100px; /* Ajusta este valor según tus necesidades */
   }
 }
 
-/* Modal Styles */
+/* Estilos adicionales para el modal de proyectos */
 body.modal-open {
   overflow: hidden;
 }
@@ -262,7 +263,7 @@ body.modal-open {
   }
 }
 
-/* Footer Styles */
+/* ========================   Footer   ============================= */
 .text-icon {
   color: #000050;
   font-size: 1.8rem;
@@ -274,7 +275,8 @@ body.modal-open {
   color: #0707f3;
 }
 
-/* Responsive Styles */
+/* ========================   Responsive   ============================= */
+
 @media (max-width: 991.98px) {
   #hero img {
     max-width: 300px;
