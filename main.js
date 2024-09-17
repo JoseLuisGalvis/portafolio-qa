@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Modal de Proyectos
-// Modal de Proyectos
 function showProjectDetails(project) {
   const projectData = {
     ecommerce: {
@@ -269,7 +268,7 @@ ScrollTrigger.create({
     // Animar la imagen usando el id #habilidades-img
     gsap.from("#habilidades-img", {
       duration: 4,
-      opacity: 0,
+      opacity: 1,
       x: -100, // La imagen aparece desde la izquierda
       ease: "power3.out",
     });
