@@ -720,6 +720,7 @@
       type="text/javascript"
       src="https://cdn.emailjs.com/dist/email.min.js"
     ></script>
+
     <script type="text/javascript">
       (function () {
         // Reemplaza "tu_user_id" con tu User ID de EmailJS
@@ -734,10 +735,15 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
+          const form = this; // Guardar referencia al formulario
+
           emailjs.sendForm("service_mn9l8gc", "template_5kp1ksm", this).then(
             function () {
               console.log("Mensaje Enviado con Éxito!");
               alert("Mensaje Enviado con Éxito");
+
+              // Limpiar el formulario después de enviarlo con éxito
+              form.reset();
             },
             function (error) {
               console.log("Error al Enviar el Mensaje", error);
@@ -746,6 +752,7 @@
           );
         });
     </script>
+
     <script src="main.js"></script>
   </body>
 </html>
