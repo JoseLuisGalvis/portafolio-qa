@@ -215,19 +215,6 @@
   height: 200px; /* Ajusta este valor según tus necesidades */
 }
 
-/* Media queries para dispositivos tablet y móvil */
-@media (max-width: 768px) {
-  .card-project img {
-    height: 150px; /* Ajusta este valor según tus necesidades */
-  }
-}
-
-@media (max-width: 576px) {
-  .card-project img {
-    height: 100px; /* Ajusta este valor según tus necesidades */
-  }
-}
-
 /* Estilos adicionales para el modal de proyectos */
 body.modal-open {
   overflow: hidden;
@@ -237,7 +224,52 @@ body.modal-open {
   max-width: 95%;
 }
 
-@media (max-width: 767px) {
+/* ========================   Footer   ============================= */
+.text-icon {
+  color: #000050;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text-icon:hover {
+  color: #0707f3;
+}
+
+/* ========================   Responsive   ============================= */
+@media (max-width: 1024px) and (min-width: 991.99px) {
+  #hero img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand span,
+  .lead {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}
+
+/* Responsive Tablet  */
+@media (max-width: 991.99px) and (min-width: 576.01px) {
+  #hero img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .navbar-brand span,
+  .lead {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+  }
   .modal-dialog.modal-xl {
     max-width: 100%;
     margin: 0;
@@ -261,57 +293,15 @@ body.modal-open {
   #documentList {
     margin-bottom: 1rem;
   }
-}
 
-/* ========================   Footer   ============================= */
-.text-icon {
-  color: #000050;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.text-icon:hover {
-  color: #0707f3;
-}
-
-/* ========================   Responsive   ============================= */
-
-@media (max-width: 991.98px) {
-  #hero img {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-  }
-
-  .navbar-brand span,
-  .lead {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+  .card-project img {
+    height: 150px; /* Ajusta este valor según tus necesidades */
   }
 }
 
-@media (max-width: 767.98px) {
-  #hero img {
-    max-width: 200px;
-    margin: 0 auto;
-  }
+/* Responsive Mobile */
 
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .navbar-brand span,
-  .lead {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-  }
-}
-
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   #hero img {
     max-width: 200px;
     margin: 0 auto;
@@ -333,5 +323,9 @@ body.modal-open {
   .navbar-brand span,
   .lead {
     font-size: clamp(1rem, 2vw, 1rem);
+  }
+
+  .card-project img {
+    height: 100px; /* Ajusta este valor según tus necesidades */
   }
 }
