@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Animación para la imagen del header (desplazarse desde la derecha)
-  gsap.from(".img-fluid", {
+  gsap.from(".img-hero", {
     duration: 2.5,
     x: "100vw", // Desplazarse desde la derecha
     opacity: 0,
@@ -246,33 +246,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
   });
-});
 
-// Segunda Sección Habilidades
-// Registrar el plugin ScrollTrigger en GSAP
-gsap.registerPlugin(ScrollTrigger);
+  // Animación para la sección de habilidades
+  const habilidadesSection = document.querySelector("#habilidades");
 
-// Animación para la sección de habilidades cuando se activa el scroll
-ScrollTrigger.create({
-  trigger: "#habilidades",
-  start: "top 80%",
-  onEnter: () => {
-    // Animar el contenido de habilidades
-    gsap.from("#habilidades .display-4", {
-      duration: 3,
-      opacity: 1,
-      y: 50,
-      ease: "power3.out",
-    });
+  // Animación para la imagen de habilidades (desplazarse desde la derecha)
+  gsap.from(".img-habilidades", {
+    duration: 2.5,
+    x: "100vw", // Desplazarse desde la derecha
+    opacity: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: habilidadesSection,
+      start: "top 80%", // Inicia la animación cuando la parte superior de la sección está en el 80% de la vista
+      toggleActions: "play none none none", // Solo reproducir la animación
+    },
+  });
 
-    // Animar la imagen usando el id #habilidades-img
-    gsap.from("#habilidades-img", {
-      duration: 4,
-      opacity: 1,
-      x: -100, // La imagen aparece desde la izquierda
-      ease: "power3.out",
-    });
-  },
+  // Animación para el texto de habilidades (desplazarse desde la izquierda con retraso)
+  gsap.from(".display-habilidades", {
+    duration: 2.5,
+    x: "-100vw", // Desplazarse desde la izquierda
+    opacity: 0,
+    ease: "power2.out",
+    delay: 0.5, // Retraso para que entre después de la imagen
+    scrollTrigger: {
+      trigger: habilidadesSection,
+      start: "top 80%", // Inicia la animación cuando la parte superior de la sección está en el 80% de la vista
+      toggleActions: "play none none none",
+    },
+  });
+
+  // Animación individualizada para cada botón de habilidades
+  gsap.from("#tecnicas-btn, #blandas-btn", {
+    duration: 2,
+    scale: 0.7,
+    opacity: 0,
+    ease: "back.out(1.7)",
+    stagger: 0.2, // Para que se animen uno tras otro
+    scrollTrigger: {
+      trigger: habilidadesSection,
+      start: "top 80%", // Inicia la animación cuando la parte superior de la sección está en el 80% de la vista
+      toggleActions: "play none none none",
+    },
+  });
 });
 
 // Modales
@@ -327,4 +344,29 @@ gsap.utils.toArray(".about_card").forEach((card, index) => {
       toggleActions: "play none none reverse", // Para revertir la animación si el usuario hace scroll hacia arriba
     },
   });
+});
+
+// Efecto Parallax
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".parallax-section").forEach((section, i) => {
+  gsap.fromTo(
+    section,
+    {
+      y: 50,
+      opacity: 0.8,
+    },
+    {
+      y: -50,
+      opacity: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    }
+  );
 });

@@ -20,8 +20,7 @@
   background-color: var(--primary-color);
 }
 
-.navbar-brand img,
-.footer_logo img {
+.navbar-brand img {
   max-width: 35px;
 }
 
@@ -71,10 +70,25 @@
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
+/* =======================   parallax-section   ========================= */
+
+.parallax-section {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* ========================   Habilidades   ============================= */
 
 #habilidades {
   height: 100vh;
+}
+
+.display-habilidades {
+  font-size: 3em;
 }
 
 .btn-habilidades {
@@ -225,6 +239,11 @@ body.modal-open {
 }
 
 /* ========================   Footer   ============================= */
+.footer_logo_img {
+  width: 6em;
+  height: 6em;
+}
+
 .text-icon {
   color: #000050;
   font-size: 1.8rem;
